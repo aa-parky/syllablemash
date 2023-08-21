@@ -2,7 +2,7 @@ import pyphen
 import re
 
 # Load a hyphenation dictionary for a specific language
-dictionary = pyphen.Pyphen(lang='en_FR')
+dictionary = pyphen.Pyphen(lang='en_En')
 
 
 def hyphenate_paragraph(paragraph):
@@ -20,7 +20,7 @@ def hyphenate_paragraph(paragraph):
 
 
 # Read the text from the file "input.txt"
-with open("french_input.txt", "r") as file:
+with open("english_sounding_input.txt", "r") as file:
     input_text = file.read()
 
 hyphenated_word_list = hyphenate_paragraph(input_text)
@@ -29,17 +29,17 @@ hyphenated_word_list = hyphenate_paragraph(input_text)
 print(hyphenated_word_list)
 
 # Save the hyphenated word list to the file "output.txt"
-with open("french_output.txt", "w") as file:
+with open("english_sounding_output.txt", "w") as file:
     for word in hyphenated_word_list:
         file.write(word + '\n')
 
 # Read the content from the file "output.txt"
-with open("french_output.txt", "r") as file:
+with open("english_sounding_output.txt", "r") as file:
     content = file.read()
 
 # Replace hyphens with new lines and remove hyphens
 modified_content = re.sub(r'-', '\n', content)
 
 # Write the modified content back to the file "output.txt"
-with open("french_output.txt", "w") as file:
+with open("english_sounding_output.txt", "w") as file:
     file.write(modified_content)

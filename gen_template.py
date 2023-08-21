@@ -1,6 +1,5 @@
 import os
 
-
 def main():
     # Get user input for the directory name (without "_sounding")
     dir_name = input("Enter the name for the directory: ")
@@ -22,13 +21,11 @@ def main():
     except OSError:
         print(f"Error creating directory '{dir_name}'.")
 
-
 def sanitize_dir_name(name):
     # Replace invalid characters with underscores
     valid_chars = "-_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     sanitized_name = ''.join(c if c in valid_chars else '_' for c in name)
     return sanitized_name
-
 
 def create_files(directory):
     # File names
@@ -46,25 +43,31 @@ def create_files(directory):
         with open(os.path.join(directory, output_file_name), 'w') as output_file:
             pass
 
-        # Create empty name generator file
+        # Read the name_generator template file
+        with open('name_generator_template.py', 'r') as template_file:
+            template_content = template_file.read()
+
+        # Replace occurrences of 'COUNTRY' with directory
+        modified_content = template_content.replace('COUNTRY', directory)
+
+        # Create name generator file with modified content
         with open(os.path.join(directory, name_generator), 'w') as name_gen_file:
-            pass
+            name_gen_file.write(modified_content)
 
         # Read the paragraph_hyphenator template file
         with open('paragraph_hyphenator_template.py', 'r') as template_file:
-            template_content = template_file.read()
+            para_template_content = template_file.read()
 
-        # Replace occurrences of 'COUNTRY' with dir_name
-        modified_content = template_content.replace('COUNTRY', directory)
+        # Replace occurrences of 'COUNTRY' with directory
+        para_modified_content = para_template_content.replace('COUNTRY', directory)
 
         # Create paragraph hyphenator file with modified content
         with open(os.path.join(directory, paragraph_hyphenator), 'w') as para_hyphenator_file:
-            para_hyphenator_file.write(modified_content)
+            para_hyphenator_file.write(para_modified_content)
 
         print(f"Empty input, output, name generator, and paragraph hyphenator files created successfully!")
     except IOError:
         print("Error creating files.")
-
 
 if __name__ == "__main__":
     main()
