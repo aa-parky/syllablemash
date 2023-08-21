@@ -1,3 +1,6 @@
+# Name Generation
+Basically I am trying to create my own name generators.
+
 # syllablemash
 python script to identify syllables and split them from the word creating a syllable list.
 
