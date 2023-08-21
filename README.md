@@ -21,3 +21,10 @@ The main rules of syllabication are:
 
 Syllabication is the process of decoding different words based on their sounds and vowel/consonant ordering. 
 Phonics is the larger process of decoding words into their sounds in order to successfully read them as whole words.
+
+### Links
+
+https://pyphen.org
+
+https://www.nltk.org
+
