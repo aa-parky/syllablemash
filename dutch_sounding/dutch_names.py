@@ -1,7 +1,7 @@
 import random
 
 # Read the list of words from the output.txt file
-with open('output.txt', 'r') as file:
+with open('dutch_output.txt', 'r') as file:
     word_list = [line.strip() for line in file]
 
 # Number of names to generate
