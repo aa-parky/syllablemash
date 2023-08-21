@@ -2,11 +2,11 @@ import random
 import datetime
 
 # Read the list of words from the output.txt file
-with open('gaelic_sounding_output.txt', 'r') as file:
+with open('polish_sounding_output.txt', 'r') as file:
     word_list = [line.strip() for line in file]
 
 # Number of names to generate
-num_names = 10
+num_names = 5
 
 generated_names = []  # To store the generated names
 
