@@ -1,4 +1,4 @@
-# Name Generation
+be done# Name Generation
 Basically I am trying to create my own name generators.
 
 # syllablemash
@@ -32,6 +32,9 @@ https://pyphen.org
 https://www.nltk.org
 
 ### Examples
+
+The following examples have not been tweeked and all generate random names in the same fashion. by combining between 1 & 3 words from the output.txt file. Furthere tweaks need to be done.
+
 **afrikaans sounding**
 
 Generated Name: Kon
