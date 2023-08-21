@@ -3,9 +3,7 @@ python script to identify syllables and split them from the word creating a syll
 
 ## What is Syllabication?
 
-https://study.com/academy/lesson/teaching-syllabication-word-breaks.html
-
-from the above;
+The division of words into syllables, either in speech or in writing.
 
 ### FAQ
 
