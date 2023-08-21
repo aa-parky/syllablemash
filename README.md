@@ -33,7 +33,7 @@ https://www.nltk.org
 
 ### Examples
 
-The following examples have not been tweeked and all generate random names in the same fashion. by combining between 1 & 3 words from the output.txt file. Furthere tweaks need to be done.
+The following examples have not been tweaked and all generate random names in the same fashion. by combining between 1 & 3 words from the output.txt file. Further tweaks need to be done.
 
 **afrikaans sounding**
 
