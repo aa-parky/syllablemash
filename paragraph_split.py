@@ -2,7 +2,7 @@ import pyphen
 import re
 
 # Load a hyphenation dictionary for a specific language
-dictionary = pyphen.Pyphen(lang='en_US')
+dictionary = pyphen.Pyphen(lang='en_FR')
 
 
 def hyphenate_paragraph(paragraph):
